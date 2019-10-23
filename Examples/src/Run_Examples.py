@@ -8,7 +8,7 @@ from Supported_File_Formats.Annotation_Python_Get_All_Supported_Formats import A
 # Get your app_sid and app_key at https://dashboard.groupdocs.cloud (free registration is required).
 Common_Utilities.host_url = "https://api.groupdocs.cloud"  # Put your Host URL here
 Common_Utilities.app_sid = "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
-Common_Utilities.app_key = "XXXXXXXXXXXXXXXXXXXX"
+Common_Utilities.app_key = "XXXXXXXXXXXXXXX"
 Common_Utilities.myStorage = "XXXXX"
 
 # #########################################
@@ -114,9 +114,53 @@ Annotation_Python_Get_All_Supported_Formats.Run()
 # print("*** Executing Working_With_Annotations...")
 # ############################################################
 
-# print("* Executing Annotation_Python_Add_Annotation...")
-# from Working_With_Annotations.Annotation_Python_Add_Annotation import Annotation_Python_Add_Annotation
-# Annotation_Python_Add_Annotation.Run()
+# print("* Executing Annotation_Python_Add_Multiple_Annotations...")
+# from Working_With_Annotations.Annotation_Python_Add_Multiple_Annotations import Annotation_Python_Add_Multiple_Annotations
+# Annotation_Python_Add_Multiple_Annotations.Run()
+
+# print("* Executing Annotation_Python_Add_Area_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_Area_Annotation import Annotation_Python_Add_Area_Annotation
+# Annotation_Python_Add_Area_Annotation.Run()
+
+# print("* Executing Annotation_Python_Add_Arrow_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_Arrow_Annotation import Annotation_Python_Add_Arrow_Annotation
+# Annotation_Python_Add_Arrow_Annotation.Run()
+
+# print("* Executing Annotation_Python_Add_Point_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_Point_Annotation import Annotation_Python_Add_Point_Annotation
+# Annotation_Python_Add_Point_Annotation.Run()
+
+# print("* Executing Annotation_Python_Add_Polyline_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_Polyline_Annotation import Annotation_Python_Add_Polyline_Annotation
+# Annotation_Python_Add_Polyline_Annotation.Run()
+
+# print("* Executing Annotation_Python_Add_Text_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_Text_Annotation import Annotation_Python_Add_Text_Annotation
+# Annotation_Python_Add_Text_Annotation.Run()
+
+# print("* Executing Annotation_Python_Add_TextField_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_TextField_Annotation import Annotation_Python_Add_TextField_Annotation
+# Annotation_Python_Add_TextField_Annotation.Run()
+
+# print("* Executing Annotation_Python_Add_TextRedaction_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_TextRedaction_Annotation import Annotation_Python_Add_TextRedaction_Annotation
+# Annotation_Python_Add_TextRedaction_Annotation.Run()
+
+# print("* Executing Annotation_Python_Add_TextReplacement_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_TextReplacement_Annotation import Annotation_Python_Add_TextReplacement_Annotation
+# Annotation_Python_Add_TextReplacement_Annotation.Run()
+
+# print("* Executing Annotation_Python_Add_TextStrikeout_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_TextStrikeout_Annotation import Annotation_Python_Add_TextStrikeout_Annotation
+# Annotation_Python_Add_TextStrikeout_Annotation.Run()
+
+# print("* Executing Annotation_Python_Add_TextUnderline_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_TextUnderline_Annotation import Annotation_Python_Add_TextUnderline_Annotation
+# Annotation_Python_Add_TextUnderline_Annotation.Run()
+
+# print("* Executing Annotation_Python_Add_Watermark_Annotation...")
+# from Working_With_Annotations.Annotation_Python_Add_Watermark_Annotation import Annotation_Python_Add_Watermark_Annotation
+# Annotation_Python_Add_Watermark_Annotation.Run()
 
 # print("* Executing Annotation_Python_Get_Annotation...")
 # from Working_With_Annotations.Annotation_Python_Get_Annotation import Annotation_Python_Get_Annotation

@@ -17,6 +17,11 @@ class Common_Utilities:
         return groupdocs_annotation_cloud.AnnotateApi.from_keys(Common_Utilities.app_sid, Common_Utilities.app_key)
     
     @classmethod
+    def Get_InfoApi_Instance(self):
+        # Create instance of the API
+        return groupdocs_annotation_cloud.InfoApi.from_keys(Common_Utilities.app_sid, Common_Utilities.app_key)
+    
+    @classmethod
     def Get_PreviewApi_Instance(self):
         # Create instance of the API
         return groupdocs_annotation_cloud.PreviewApi.from_keys(Common_Utilities.app_sid, Common_Utilities.app_key)
