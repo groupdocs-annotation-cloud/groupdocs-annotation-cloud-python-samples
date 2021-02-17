@@ -1,17 +1,19 @@
 # Import modules
+import os
+
 from groupdocs_annotation_cloud import *
 import groupdocs_annotation_cloud
 
 from Common import Common
 
-class AddAreaAnnotation:
+class AddAnnotationDirect:
     
     @classmethod
     def Run(cls):
         # Create instance of the API
         api = groupdocs_annotation_cloud.AnnotateApi.from_config(Common.GetConfig())
         
-        try:        
+        try:           
             a1 = groupdocs_annotation_cloud.AnnotationInfo()
             a1.annotation_position = groupdocs_annotation_cloud.Point()
             a1.annotation_position.x = 1
@@ -35,11 +37,10 @@ class AddAreaAnnotation:
             options = AnnotateOptions()
             options.file_info = file_info
             options.annotations = [a1]
-            options.output_path = "Output\\output.docx"
 
-            request = AnnotateRequest(options)
-            result = api.annotate(request)         
-            
-            print("AddAreaAnnotation: Area Annotation added: " + result['href'])
+            request = AnnotateDirectRequest(options)
+            result = api.annotate_direct(request)         
+
+            print("AddAnnotationDirect: Document Length: " + str(os.path.getsize(result)))
         except ApiException as e:
-            print("Exception when calling AnnotateAPI: {0}".format(e.message))
+            print("Exception when calling AddAnnotationDirect: {0}".format(e.message))

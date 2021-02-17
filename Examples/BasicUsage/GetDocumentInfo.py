@@ -10,7 +10,10 @@ class GetDocumentInfo:
         # Create instance of the API
         api = groupdocs_annotation_cloud.InfoApi.from_config(Common.GetConfig())
         
-        request = GetInfoRequest("annotationdocs\\one-page.docx")
+        file_info = FileInfo()
+        file_info.file_path = "annotationdocs\\one-page.docx"
+        
+        request = GetInfoRequest(file_info)
         response = api.get_info(request)
         
         print("Page count = " + str(len(response.pages)))

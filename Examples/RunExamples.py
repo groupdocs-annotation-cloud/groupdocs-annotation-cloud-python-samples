@@ -4,7 +4,7 @@ import groupdocs_annotation_cloud
 from Common import Common
 
 # Get your ClientId and ClientSecret at https://dashboard.groupdocs.cloud (free registration is required).
-Common.client_id = "XXXX-XXXX-XXXX-XXXX"
+Common.client_id = "XXXXXXXXXXXXXXXX"
 Common.client_secret = "XXXXXXXXXXXXXXXX"
 
 Common.myStorage = "First Storage"
@@ -24,10 +24,11 @@ GetDocumentInfo.Run()
 
 from AdvancedUsage.AddAnnotations.AddAreaAnnotation import AddAreaAnnotation
 AddAreaAnnotation.Run()
+
 # from AdvancedUsage.AddAnnotations.AddArrowAnnotation import AddArrowAnnotation
 # AddArrowAnnotation.Run()
-# from AdvancedUsage.AddAnnotations.AddMultipleAnnotations import AddMultipleAnnotations
-# AddMultipleAnnotations.Run()
+from AdvancedUsage.AddAnnotations.AddMultipleAnnotations import AddMultipleAnnotations
+AddMultipleAnnotations.Run()
 # from AdvancedUsage.AddAnnotations.AddPointAnnotation import AddPointAnnotation
 # AddPointAnnotation.Run()
 # from AdvancedUsage.AddAnnotations.AddPolylineAnnotation import AddPolylineAnnotation
@@ -45,12 +46,12 @@ AddAreaAnnotation.Run()
 # from AdvancedUsage.AddAnnotations.AddWatermarkAnnotation import AddWatermarkAnnotation
 # AddWatermarkAnnotation.Run()
 
-from AdvancedUsage.GetAnnotations.GetAnnotations import GetAnnotations
-GetAnnotations.Run()
-from AdvancedUsage.ExportDocumentWithAnnotations.ExportDocument import ExportDocument
-ExportDocument.Run()
-from AdvancedUsage.DeleteAnnotations.DeleteAnnotations import DeleteAnnotations
-DeleteAnnotations.Run()
+from AdvancedUsage.ExtractAnnotations.ExtractAnnotations import ExtractAnnotations
+ExtractAnnotations.Run()
+from AdvancedUsage.AddAnnotationDirect.AddAnnotationDirect import AddAnnotationDirect
+AddAnnotationDirect.Run()
+from AdvancedUsage.RemoveAnnotations.RemoveAnnotations import RemoveAnnotations
+RemoveAnnotations.Run()
 
 from AdvancedUsage.DocumentPreview.GetPages import GetPages
 GetPages.Run()

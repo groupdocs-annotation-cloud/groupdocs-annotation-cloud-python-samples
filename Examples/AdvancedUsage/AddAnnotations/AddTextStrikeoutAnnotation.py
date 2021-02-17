@@ -33,9 +33,16 @@ class AddTextStrikeoutAnnotation:
             a1.text = "This is text strikeout annotation"
             a1.creator_name = "Anonym A."
     
-            request = PostAnnotationsRequest("annotationdocs\\one-page.docx", [a1])
-            api.post_annotations(request)
+            file_info = FileInfo()
+            file_info.file_path = "annotationdocs\\one-page.docx"
+            options = AnnotateOptions()
+            options.file_info = file_info
+            options.annotations = [a1]
+            options.output_path = "Output\\output.docx"
+
+            request = AnnotateRequest(options)
+            result = api.annotate(request)         
             
-            print("AddTextStrikeoutAnnotation: Text Strikeout Annotation added.")
+            print("AddTextStrikeoutAnnotation: Text Strikeout Annotation added: " + result['href'])
         except ApiException as e:
             print("Exception when calling AnnotateAPI: {0}".format(e.message))

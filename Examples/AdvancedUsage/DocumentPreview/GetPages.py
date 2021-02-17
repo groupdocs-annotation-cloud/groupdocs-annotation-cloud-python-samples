@@ -12,7 +12,13 @@ class GetPages:
         api = groupdocs_annotation_cloud.PreviewApi.from_config(Common.GetConfig())
         
         try:            
-            request = GetPagesRequest("annotationdocs\\one-page.docx", None, None, None, None, None, None, None)
+            file_info = FileInfo()
+            file_info.file_path = "annotationdocs\\one-page.docx"
+
+            options = PreviewOptions()
+            options.file_info = file_info
+
+            request = GetPagesRequest(options)
             response = api.get_pages(request)
             
             print("GetPages: pages count = " + str(response.total_count))

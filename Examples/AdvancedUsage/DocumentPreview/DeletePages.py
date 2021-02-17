@@ -11,8 +11,11 @@ class DeletePages:
         # Create instance of the API
         api = groupdocs_annotation_cloud.PreviewApi.from_config(Common.GetConfig())
         
-        try:            
-            request = DeletePagesRequest("annotationdocs\\one-page.docx")
+        try:      
+            file_info = FileInfo()
+            file_info.file_path = "annotationdocs\\one-page.docx"            
+
+            request = DeletePagesRequest(file_info)
             api.delete_pages(request)
             
             print("DeletePages: pages deleted")

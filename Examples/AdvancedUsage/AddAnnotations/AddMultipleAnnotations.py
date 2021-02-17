@@ -41,7 +41,7 @@ class AddMultipleAnnotations:
             a2.box.height = 100
             a2.page_number = 2
             a2.pen_color = 1201033
-            a2.pen_style = 0
+            a2.pen_style = "Solid"
             a2.pen_width = 1
             a2.opacity = 0.7
             a2.type = "Area"
@@ -74,16 +74,23 @@ class AddMultipleAnnotations:
             a4.box.height = 100
             a4.page_number = 5
             a4.pen_color = 1201033
-            a4.pen_style = 0
+            a4.pen_style = "Solid"
             a4.pen_width = 1
             a4.opacity = 0.7
             a4.type = "Arrow"
             a4.text = "This is arrow annotation"
             a4.creator_name = "Anonym A."
-    
-            request = PostAnnotationsRequest("annotationdocs\\ten-pages.docx", [a1, a2, a3, a4])
-            api.post_annotations(request)
-            
-            print("AddMultipleAnnotations: Multiple Annotations added.")
+        
+            file_info = FileInfo()
+            file_info.file_path = "annotationdocs\\ten-pages.docx"
+            options = AnnotateOptions()
+            options.file_info = file_info
+            options.annotations = [a1, a2, a3, a4]
+            options.output_path = "Output\\output.docx"
+
+            request = AnnotateRequest(options)
+            result = api.annotate(request)         
+
+            print("AddMultipleAnnotations: Multiple Annotations added: " + result['href'])
         except ApiException as e:
             print("Exception when calling AnnotateAPI: {0}".format(e.message))
