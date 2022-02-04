@@ -43,6 +43,8 @@ from AdvancedUsage.AddAnnotations.AddTextStrikeoutAnnotation import AddTextStrik
 AddTextStrikeoutAnnotation.Run()
 from AdvancedUsage.AddAnnotations.AddTextUnderlineAnnotation import AddTextUnderlineAnnotation
 AddTextUnderlineAnnotation.Run()
+from AdvancedUsage.AddAnnotations.AddSquigglyAnnotation import AddSquigglyAnnotation
+AddSquigglyAnnotation.Run()
 from AdvancedUsage.AddAnnotations.AddWatermarkAnnotation import AddWatermarkAnnotation
 AddWatermarkAnnotation.Run()
 
